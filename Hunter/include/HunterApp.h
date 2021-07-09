@@ -14,6 +14,9 @@ namespace Hunter {
 
 		virtual ~HunterApp();
 
+		static int GetWindowWidth();
+		static int GetWindowHeight();
+
 	private:
 		HunterApp();
 

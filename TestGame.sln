@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1525
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGame", "TestGame\TestGame.vcxproj", "{5F6A47B1-01FB-47CF-9F4D-150803CC4C31}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "glfw\src\glfw.vcxproj", "{BF97FF5A-76D2-3057-B1AA-52A9B85F505D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "glad\glad.vcxproj", "{72BAFD77-283F-4703-A41E-D61B898D9FA3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stb_image", "stb_image\stb_image.vcxproj", "{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{72BAFD77-283F-4703-A41E-D61B898D9FA3}.Release|x64.Build.0 = Release|x64
 		{72BAFD77-283F-4703-A41E-D61B898D9FA3}.RelWithDebInfo|x64.ActiveCfg = Release|x64
 		{72BAFD77-283F-4703-A41E-D61B898D9FA3}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.Debug|x64.ActiveCfg = Debug|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.Debug|x64.Build.0 = Debug|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.MinSizeRel|x64.ActiveCfg = Debug|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.MinSizeRel|x64.Build.0 = Debug|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.Release|x64.ActiveCfg = Release|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.Release|x64.Build.0 = Release|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{D591072A-D4C1-4EC8-BDA4-215613B9DBA9}.RelWithDebInfo|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

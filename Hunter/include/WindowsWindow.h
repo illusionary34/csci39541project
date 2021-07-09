@@ -15,6 +15,9 @@ namespace Hunter {
 		virtual void SwapBuffers() override;
 		virtual void PollEvents() override;
 
+		virtual int GetWidth() override;
+		virtual int GetHeight() override;
+
 	private:
 		GLFWwindow* window;
 	};
