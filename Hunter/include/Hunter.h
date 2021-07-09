@@ -7,4 +7,5 @@
 		classname::init();\
 		Hunter::HunterApp * gameptr = classname::getInstance();\
 		gameptr->run();\
+		delete gameptr;\
 	}

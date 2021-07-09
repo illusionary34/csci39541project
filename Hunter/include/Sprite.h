@@ -16,6 +16,11 @@ namespace Hunter
 		const unsigned char* GetImagePtr() const;
 		~Sprite();
 
+		Sprite(const Sprite& other) = delete;
+		Sprite(Sprite&& other) = delete;
+		Sprite& operator=(const Sprite& other) = delete;
+		Sprite& operator=(Sprite&& other) = delete;
+
 	private:
 		unsigned char* mImage {nullptr};
 		int mWidth{ 0 };

@@ -24,11 +24,16 @@ namespace Hunter {
 		Sprite test{"../Hunter/assets/sprites/thing.png"};
 
 		while (true) {
-			Renderer::draw(test, 100, 100, test.GetWidth(), test.GetHeight());
+			Renderer::clearFrame();
+			OnUpdate();
 
 			appwindow->PollEvents();
 			appwindow->SwapBuffers();
 		}
+	}
+
+	void HunterApp::OnUpdate()
+	{
 	}
 
 	HunterApp::~HunterApp()
@@ -46,11 +51,20 @@ namespace Hunter {
 		return instance->appwindow->GetHeight();
 	}
 
+	void HunterApp::onKeyPressed(KeyPressedEvent& event)
+	{
+		HLOG(event.GetKeyCode());
+	}
+
 	HunterApp::HunterApp()
 	{
 		assert(instance == nullptr);
 
+		instance = this;
+
 		appwindow = new Hunter::WindowsWindow;
 		appwindow->CreateWindow(800, 600);
+
+		appwindow->SetKeyPressedCallback([this](KeyPressedEvent& event) {onKeyPressed(event); });
 	}
 }

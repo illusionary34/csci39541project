@@ -5,6 +5,8 @@
 namespace Hunter {
 	Sprite::Sprite(const std::string& spriteFile)
 	{
+		stbi_set_flip_vertically_on_load(true);
+
 		if (!Load(spriteFile)) 
 			HLOG("ERROR LOADING SPRITE FILE " + spriteFile)
 	}

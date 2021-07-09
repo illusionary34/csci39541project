@@ -11,6 +11,7 @@ namespace Hunter {
 		static void init();
 		static void draw(const Sprite& image, int x_pos, int y_pos, int width, int height);
 		static void shutdown();
+		static void clearFrame();
 
 	private:
 		Renderer();

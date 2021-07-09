@@ -1,5 +1,6 @@
 #pragma once
 #include "HunterCentral.h"
+#include "KeyboardEvents.h"
 
 namespace Hunter
 {
@@ -13,5 +14,7 @@ namespace Hunter
 
 		virtual int GetWidth() = 0;
 		virtual int GetHeight() = 0;
+
+		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) = 0;
 	};
 };

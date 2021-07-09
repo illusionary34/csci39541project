@@ -19,6 +19,10 @@ namespace Hunter
 		if (instance != nullptr)
 			delete instance;
 	}
+	void Renderer::clearFrame()
+	{
+		instance->mDrawingEngine->clearFrame();
+	}
 	Renderer::Renderer()
 	{
 		mDrawingEngine = new OpenGLImplementation;

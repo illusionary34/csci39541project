@@ -12,6 +12,8 @@ namespace Hunter
 		virtual void init() override;
 		virtual void shutdown() override;
 		virtual void draw(const Sprite& image, int xpos, int ypos, int width, int height) override;
+		virtual void clearFrame() override;
+
 		virtual ~OpenGLImplementation() override;
 
 	private:

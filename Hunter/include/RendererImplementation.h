@@ -9,6 +9,8 @@ namespace Hunter {
 		virtual void init() = 0;
 		virtual void shutdown() = 0;
 		virtual void draw(const Sprite& image, int xpos, int ypos, int width, int height) = 0;
+		virtual void clearFrame() = 0;
+
 		virtual ~RendererImplementation() = 0 {};
 	};
 }
