@@ -5,7 +5,7 @@
 #include "OpenGLImplementation.h"
 
 namespace Hunter {
-	class Renderer
+	class HUNTER_API Renderer
 	{
 	public:
 		static void init();

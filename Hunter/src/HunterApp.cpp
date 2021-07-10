@@ -18,21 +18,26 @@ namespace Hunter {
 	}
 	void HunterApp::run()
 	{
-		HLOG("starting game");
+		HLOG("starting hunter engine");
 
 		Renderer::init();
-		Sprite test{"../Hunter/assets/sprites/thing.png"};
+
+		mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 
 		while (true) {
 			Renderer::clearFrame();
-			OnUpdate();
+			onUpdate();
+
+			std::this_thread::sleep_until(mNextFrameTime);
 
 			appwindow->PollEvents();
 			appwindow->SwapBuffers();
+
+			mNextFrameTime += mFrameDuration;
 		}
 	}
 
-	void HunterApp::OnUpdate()
+	void HunterApp::onUpdate()
 	{
 	}
 

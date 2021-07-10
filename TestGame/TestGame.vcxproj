@@ -55,7 +55,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Hunter\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\Hunter\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -71,7 +71,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Hunter\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\Hunter\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -87,7 +87,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\main.cpp" />
     <ClCompile Include="src\TestGame.cpp" />
+    <ClCompile Include="src\Unit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\TestGame.h" />
+    <ClInclude Include="include\Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

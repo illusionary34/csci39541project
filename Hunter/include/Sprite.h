@@ -2,7 +2,6 @@
 
 #include "HunterCentral.h"
 #include "pch.h"
-#include "stb_image.h"
 
 namespace Hunter 
 {

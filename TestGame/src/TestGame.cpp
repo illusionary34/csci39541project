@@ -1,7 +1,29 @@
-#include "Hunter.h"
+#include "TestGame.h"
 
-class TestGame : public Hunter::HunterApp {
-	
-};
+TestGame::TestGame() :
+	mSpaceship("assets/player.png", 5), playerAction(Action::Standing)
+{
+	HLOG("RoBoxed INIT")
+}
 
-START_GAME(TestGame)
+void TestGame::onUpdate()
+{
+	if (playerAction == Action::LeftMove)
+		mSpaceship.updateXCoord(-mSpaceship.getSpeed());
+	else if (playerAction == Action::RightMove)
+		mSpaceship.updateXCoord(mSpaceship.getSpeed());
+
+	mSpaceship.draw();
+}
+
+void TestGame::onKeyPressed(Hunter::KeyPressedEvent& event)
+{
+	switch (event.GetKeyCode()) {
+	case HUNTER_KEY_LEFT:
+		playerAction = Action::LeftMove;
+		break;
+	case HUNTER_KEY_RIGHT:
+		playerAction = Action::RightMove;
+		break;
+	}
+}

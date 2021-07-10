@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "..\include\Sprite.h"
+#include "Sprite.h"
 #include "stb_image.h"
 
 namespace Hunter {

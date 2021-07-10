@@ -13,14 +13,14 @@ namespace Hunter {
 
 		void run();
 
-		virtual void OnUpdate();
+		virtual void onUpdate();
 
 		virtual ~HunterApp();
 
 		static int GetWindowWidth();
 		static int GetWindowHeight();
 
-		void onKeyPressed(KeyPressedEvent& event);
+		virtual void onKeyPressed(KeyPressedEvent& event);
 
 	protected:
 		HunterApp();
@@ -30,5 +30,8 @@ namespace Hunter {
 		inline static HunterApp* instance{ nullptr };
 
 		Hunter::Window* appwindow{ nullptr };
+
+		std::chrono::steady_clock::time_point mNextFrameTime;
+		std::chrono::milliseconds mFrameDuration{16};
 	};
 };

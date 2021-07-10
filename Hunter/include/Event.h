@@ -1,4 +1,6 @@
 #pragma once
+#include "HunterCentral.h"
+
 
 namespace Hunter 
 {
@@ -11,7 +13,7 @@ namespace Hunter
 		WindowRestore
 	};
 
-	class Event {
+	class HUNTER_API Event {
 	public:
 		EventType GetEventType() const;
 
