@@ -18,9 +18,16 @@ private:
 	Unit mSpaceship;
 	std::deque<Unit> boxes;
 
+	Hunter::Sprite gameOverSprite;
+	Hunter::Sprite background;
+
 	enum class Action {
 		LeftMove,
 		RightMove,
 		Standing
 	} playerAction;
+
+	bool isGameOver;
+
+	long long ticks;
 };

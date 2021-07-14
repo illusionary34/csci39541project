@@ -62,6 +62,10 @@ namespace Hunter {
 		mShaderDefault.SetVec2Int("windowSize", HunterApp::GetWindowWidth(), HunterApp::GetWindowHeight());
 
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+		glDeleteTextures(1, &picture);
+		glDeleteBuffers(1, &VBO);
+		glDeleteBuffers(1, &VAO);
 	}
 	void OpenGLImplementation::clearFrame()
 	{
