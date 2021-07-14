@@ -21,6 +21,7 @@ namespace Hunter {
 		static int GetWindowHeight();
 
 		virtual void onKeyPressed(KeyPressedEvent& event);
+		virtual void onKeyReleased(KeyReleasedEvent& event);
 
 	protected:
 		HunterApp();

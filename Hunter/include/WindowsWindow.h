@@ -19,10 +19,12 @@ namespace Hunter {
 		virtual int GetHeight() override;
 
 		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) override;
+		virtual void SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback) override;
 
 	private:
 		struct Callbacks {
 			std::function<void(KeyPressedEvent&)> KeyPressedCallback;
+			std::function<void(KeyReleasedEvent&)> KeyReleasedCallback;
 		} mCallbacks;
 
 		GLFWwindow* window;

@@ -27,3 +27,10 @@ void TestGame::onKeyPressed(Hunter::KeyPressedEvent& event)
 		break;
 	}
 }
+
+void TestGame::onKeyReleased(Hunter::KeyReleasedEvent& event)
+{
+	HLOG("test game's key released handler");
+	if (event.GetKeyCode() == HUNTER_KEY_LEFT || event.GetKeyCode() == HUNTER_KEY_RIGHT)
+		playerAction = Action::Standing;
+}

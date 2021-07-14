@@ -16,5 +16,6 @@ namespace Hunter
 		virtual int GetHeight() = 0;
 
 		virtual void SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback) = 0;
+		virtual void SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback) = 0;
 	};
 };

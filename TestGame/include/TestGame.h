@@ -12,6 +12,7 @@ public:
 	virtual void onUpdate() override;
 
 	virtual void onKeyPressed(Hunter::KeyPressedEvent& event) override;
+	virtual void onKeyReleased(Hunter::KeyReleasedEvent& event) override;
 
 private:
 	Unit mSpaceship;

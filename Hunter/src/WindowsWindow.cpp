@@ -23,6 +23,11 @@ namespace Hunter {
 				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
 				callbacks->KeyPressedCallback(event);
 			}
+			else if (action == GLFW_RELEASE) {
+				KeyReleasedEvent event{ key };
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+				callbacks->KeyReleasedCallback(event);
+			}
 			});
 
 		return true;
@@ -55,5 +60,9 @@ namespace Hunter {
 	void WindowsWindow::SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback)
 	{
 		mCallbacks.KeyPressedCallback = newCallback;
+	}
+	void WindowsWindow::SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback)
+	{
+		mCallbacks.KeyReleasedCallback = newCallback;
 	}
 };

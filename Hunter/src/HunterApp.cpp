@@ -61,6 +61,11 @@ namespace Hunter {
 		HLOG(event.GetKeyCode());
 	}
 
+	void HunterApp::onKeyReleased(KeyReleasedEvent& event)
+	{
+		HLOG("key released")
+	}
+
 	HunterApp::HunterApp()
 	{
 		assert(instance == nullptr);
@@ -71,5 +76,6 @@ namespace Hunter {
 		appwindow->CreateWindow(800, 600);
 
 		appwindow->SetKeyPressedCallback([this](KeyPressedEvent& event) {onKeyPressed(event); });
+		appwindow->SetKeyReleasedCallback([this](KeyReleasedEvent& event) {onKeyReleased(event); });
 	}
 }
